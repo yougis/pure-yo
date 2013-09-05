@@ -1,8 +1,13 @@
 pure
 ====
 
-Simple collaborative blogging Purecss based theme for Pelican blogs.
-Theme is responsive, see [purecss.io] (http:purecss.io)
+Simple collaborative blogging [Purecss](http:purecss.io) based theme for Pelican blogs.
+Theme is responsive.
+
+## PREVIEW
+![Pure preview](https://raw.github.com/danclaudiupop/pure/master/preview1.png)
+![Pure preview](https://raw.github.com/danclaudiupop/pure/master/preview2.png)
+![Pure preview](https://raw.github.com/danclaudiupop/pure/master/preview3.png)
 
 
 ## PELICANCONF.PY
