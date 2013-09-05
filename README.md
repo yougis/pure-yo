@@ -1,7 +1,7 @@
 pure
 ====
 
-Simple collaborative blogging [Purecss](http:purecss.io) based theme for Pelican blogs.
+Simple collaborative blogging [Purecss](http:purecss.io) based theme for [Pelican](http://docs.getpelican.com/) blogs.
 Theme is responsive.
 
 ## PREVIEW
@@ -14,5 +14,7 @@ Theme is responsive.
 
 * `PROFILE_IMG_URL` - Set the logo. (Has no default yet).
 * `TAGLINE` - Used for the page titles and some meta tags.
-* `DISQUS_SITENAME` set this to enable disqus comments in articles
+* `DISQUS_SITENAME` - Set this to enable disqus comments in articles.
+* `GRAVATAR` - See pelican-plugins for configuration.
 * `GOOGLE_ANALYTICS`
+
