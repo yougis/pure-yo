@@ -16,10 +16,6 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/pure.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://use.typekit.net/ajf8ggy.js"></script>
-    <script>
-        try { Typekit.load(); } catch (e) {}
-    </script>
 </head>
 
 <body>
@@ -31,10 +27,8 @@
                         <hgroup>
                         <h1 class="brand-main"><a href="/">{{ SITENAME }}</a></h1>
                         <p class="tagline">{{ TAGLINE }}</p>
-                        {% for page in PAGES %}
-                            <p class="links"><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-                            <p class="links"><a href="http://twitter.com/yuilibrary/">Twitter</a></p>
-                            <p class="links"><a href="http://twitter.com/yuilibrary/">Github</a></p>
+                        {% for title, link in MENUITEMS %}
+                            <p class="links"><a href="{{ SITEURL }}/{{ link }}">{{ title }}</a></li>
                         {% endfor %}
                         </hgroup>
                     </header>
