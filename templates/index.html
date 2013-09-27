@@ -1,48 +1,48 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="pure-g-r" id="layout">
-        <div class="sidebar pure-u">
-            <div class="cover-img" style="background-image: url('{{ COVER_IMG_URL }}')">
-                <div class="cover-body">
-                    <header class="header">
-                        <hgroup>
-                            <h1 class="brand-main"><a href="/">{{ SITENAME }}</a></h1>
-                            <p class="tagline">{{ TAGLINE }}</p>
-                        {% for title, link in MENUITEMS %}
-                            <p class="links"><a href="{{ SITEURL }}/{{ link }}">{{ title }}</a></li>
-                        {% endfor %}
-                        {% for title, link in SOCIAL %}
-                            <p class="links"><a href="{{ link }}">{{ title }}</a></li>
-                        {% endfor %}
-                        </hgroup>
-                    </header>
-                </div>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar pure-u">
+        <div class="cover-img" style="background-image: url('{{ COVER_IMG_URL }}')">
+            <div class="cover-body">
+                <header class="header">
+                    <hgroup>
+                        <h1 class="brand-main"><a href="/">{{ SITENAME }}</a></h1>
+                        <p class="tagline">{{ TAGLINE }}</p>
+                    {% for title, link in MENUITEMS %}
+                        <p class="links"><a href="{{ SITEURL }}/{{ link }}">{{ title }}</a></li>
+                    {% endfor %}
+                    {% for title, link in SOCIAL %}
+                        <p class="links"><a href="{{ link }}">{{ title }}</a></li>
+                    {% endfor %}
+                    </hgroup>
+                </header>
             </div>
         </div>
-<div class="pure-u-3-4">
-    <div class="content">
-        <!-- A wrapper for all the blog posts -->
-        <div class="posts">
-            <h1 class="content-subhead">
-                {% block pagetitle %}
-                    {% if not articles_page.has_previous() %}
-                        Latest posts
-                    {% else %}
-                        Posts
+    </div>
+    <div class="pure-u-3-4">
+        <div class="content">
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+                <h1 class="content-subhead">
+                    {% block pagetitle %}
+                        {% if not articles_page.has_previous() %}
+                            Latest posts
+                        {% else %}
+                            Posts
+                        {% endif %}
+                    {% endblock pagetitle %}
+                    {% if articles_page.has_previous() %}
+                        &ndash; Page&nbsp;{{ articles_page.number }}
                     {% endif %}
-                {% endblock pagetitle %}
-                {% if articles_page.has_previous() %}
-                    &ndash; Page&nbsp;{{ articles_page.number }}
-                {% endif %}
-            </h1>
-            {% for article in articles_page.object_list %}
-                {% include 'post.html' %}
-            {% endfor %}
-            {% include 'pagination.html' %}
-            {% include 'footer.html' %}
+                </h1>
+                {% for article in articles_page.object_list %}
+                    {% include 'post.html' %}
+                {% endfor %}
+                {% include 'pagination.html' %}
+                {% include 'footer.html' %}
+            </div>
         </div>
     </div>
-</div>
 </div>
 {% endblock content %}
