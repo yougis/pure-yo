@@ -1,6 +1,19 @@
 {% extends 'base.html' %}
 {% block title %}{{ article.title|striptags }} // {{ super() }}{% endblock title %}
 
+{% block head_css %}
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css">
+{% endblock %}
+
+{% block head_js %}
+    <script src="{{ SITEURL }}/theme/js/jquery.fitvids.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+{% endblock %}
+
 {% block content %}
 <div class="pure-g-r" id="layout">
     <div class="sidebar pure-u">

@@ -1,10 +1,8 @@
 <section class="post">
     <header class="post-header">
-        {% if AUTHOR_URL or article.email %}
         <a href="{{ SITEURL }}/{{ article.author.url }}" title="See posts by {{ article.author }}">
             <img class="post-avatar" alt="{{ article.author }}" src="{{ article.author_gravatar }}" height="72" width="72">
         </a>
-        {% endif %}
         <h3><a class="post-title" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
             <p class="post-meta">{{ article.summary }}</p>
             <p class="post-meta">
