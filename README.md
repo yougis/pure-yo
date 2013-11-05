@@ -23,3 +23,6 @@ See it live at [testpy.org](http://testpy.org/)
 
 ## Custom metadata:
 * `about_author` - displayed on article page
+
+## Aditional features
+* [FitVids](https://github.com/davatron5000/FitVids.js) jQuery plugin for fluid width video embeds.
