@@ -20,7 +20,7 @@
                             <img class="arhive-avatar" alt="{{ article.author }}" src="{{ article.author_gravatar }}" height="44" width="44">
                         </a>
                         <div class="arhive-post"><a href="{{ article.url }}">{{ article.title }}</a></div>
-                        <p class="arhive-meta">in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
+                        <p class="arhive-meta">{{ article.author }} in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
                     </div>
                 </div>
             {% endfor %}
