@@ -1,10 +1,29 @@
-pure
+Pure
 ====
 
-Simple collaborative blogging theme based on [Purecss](http:purecss.io) for [Pelican](http://docs.getpelican.com/) blogs.
+[Collaborative blogging theme](http://purepelican.com) based on [Purecss](http:purecss.io) for [Pelican](http://docs.getpelican.com/) blogs.
 Theme is responsive.
 
-See it live at [testpy.org](http://testpy.org/)
+## PELICANCONF.PY
+
+* `COVER_IMG_URL` - Set the sidebar image.
+* `PROFILE_IMAGE_URL` - Set the image for the top circle cutout.
+* `TAGLINE` - Used for the page titles and some meta tags.
+* `DISQUS_SITENAME` - Set this to enable disqus comments in articles.
+* `GOOGLE_ANALYTICS` - Set the Google Analytics code (eg. "UA-000000-00"
+* `SOCIAL` - Set some social links in the sidebar. The format should be like this:
+
+    ```python
+    SOCIAL = (
+        ('github', 'https://github.com/example/'),
+        ('twitter-square', 'https://twitter.com/example'),
+    )
+    ```
+    where the first value of the tuple is the icon name from http://fontawesome.io/icons/ after stripping `fa-` (eg. `fa-github` will be `github`)
+
+
+## Custom metadata:
+* `about_author` - displayed on article page
 
 ## PREVIEW
 
@@ -12,17 +31,7 @@ See it live at [testpy.org](http://testpy.org/)
 ![Pure preview](https://raw.github.com/danclaudiupop/pure/master/preview3.png)
 ![Pure preview](https://raw.github.com/danclaudiupop/pure/master/preview2.png)
 
-
-## PELICANCONF.PY
-
-* `COVER_IMG_URL` - Set the sidebar image. (Has no default yet). Width and height for image should be 1000px. Image, ideally should be served from a CDN.
-* `TAGLINE` - Used for the page titles and some meta tags.
-* `DISQUS_SITENAME` - Set this to enable disqus comments in articles.
-* `GRAVATAR` - See pelican-plugins for configuration.
-* `GOOGLE_ANALYTICS`
-
-## Custom metadata:
-* `about_author` - displayed on article page
+See it live at [testpy.org](http://testpy.org/)
 
 ## Aditional features
 * [FitVids](https://github.com/davatron5000/FitVids.js) jQuery plugin for fluid width video embeds.
