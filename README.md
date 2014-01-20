@@ -27,9 +27,11 @@ Theme is responsive.
 
 ## PREVIEW
 
-![Pure preview](https://raw.github.com/danclaudiupop/pure/master/preview1.png)
-![Pure preview](https://raw.github.com/danclaudiupop/pure/master/preview3.png)
-![Pure preview](https://raw.github.com/danclaudiupop/pure/master/preview2.png)
+![Pure preview](http://i.imgur.com/lqCJVrF.png)
+
+![Pure preview](http://i.imgur.com/eCUsyGk.png)
+
+![Pure preview](http://i.imgur.com/RkYxMIl.png)
 
 See it live at [testpy.org](http://testpy.org/)
 
