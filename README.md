@@ -7,7 +7,7 @@ Theme is responsive.
 ## PELICANCONF.PY
 
 * `COVER_IMG_URL` - Set the sidebar image.
-* `PROFILE_IMAGE_URL` - Set the image for the top circle cutout.
+* `PROFILE_IMAGE_URL` - Set the image for the top circle cutout on sidebar.
 * `TAGLINE` - Used for the page titles and some meta tags.
 * `DISQUS_SITENAME` - Set this to enable disqus comments in articles.
 * `GOOGLE_ANALYTICS` - Set the Google Analytics code (eg. "UA-000000-00"
@@ -22,8 +22,9 @@ Theme is responsive.
     where the first value of the tuple is the icon name from http://fontawesome.io/icons/ after stripping `fa-` (eg. `fa-github` will be `github`)
 
 
-## Custom metadata:
-* `about_author` - displayed on article page
+## Article metadata:
+* `about_author` - short summary about author displayed under gravatar
+* `email` - display author's gravar on article. See [gravatar pelican plugin](https://github.com/getpelican/pelican-plugins/tree/master/gravatar)
 
 ## PREVIEW
 
