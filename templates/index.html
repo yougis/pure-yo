@@ -20,6 +20,15 @@
                     {% endif %}
                 </h1>
                 {% for article in articles_page.object_list %}
+					{% if article and article.latex and latex is not defined %}
+						{% set latex = True %}
+						{{ article.latex }}
+					{% endif %}
+					{% if page and page.latex and latex is not defined %}
+						{% set latex = True %}
+						{{ page.latex }}
+					{% endif %}
+
                     {% include 'post.html' %}
                 {% endfor %}
                 {% include 'pagination.html' %}
