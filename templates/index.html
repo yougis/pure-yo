@@ -20,18 +20,15 @@
                     {% endif %}
                 </h1>
                 {% for article in articles_page.object_list %}
-
-                    {# Include's latex math only if an article in the index has it present #}
-                    {% if article and article.latex and latex is not defined %}
-                        {% set latex = True %}
-                        {{ article.latex }}
-                    {% endif %}
-                    {% if page and page.latex and latex is not defined %}
-                        {% set latex = True %}
-                        {{ page.latex }}
-                    {% endif %}
-
                     {% include 'post.html' %}
+                    {% if not MATH['auto_insert'] %}
+			{% if page and page.mathjax or article and article.mathjax %}
+                            {% set mathjax = True %}
+                        {% endif %}
+                    {% endif %}
+                    {% if loop.last and mathjax is defined %}
+                        {{ MATHJAXSCRIPT }}
+                    {% endif %}
                 {% endfor %}
                 {% include 'pagination.html' %}
                 {% include 'footer.html' %}
